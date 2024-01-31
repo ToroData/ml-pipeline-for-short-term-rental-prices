@@ -7,8 +7,9 @@ to be retrained with the same cadence, necessitating an end-to-end pipeline that
 
 In this project you will build such a pipeline.
 
-## Link to GitHub repo
+## Link to GitHub repo and Weights & Biases
 [GitHub Repo](https://github.com/ToroData/ml-pipeline-for-short-term-rental-prices)
+[Weights & Biases link](https://wandb.ai/ricardraigada/nyc_airbnb/overview?workspace=user-ricardraigada)
 
 
 ### Get API key for Weights and Biases
