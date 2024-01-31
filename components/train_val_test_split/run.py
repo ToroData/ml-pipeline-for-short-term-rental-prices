@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 """
 This script splits the provided dataframe in test and remainder
+
+Author: Ricard Santiago Raigada García
+Original code: From Udacity
+Date: January, 2024
 """
 import argparse
 import logging
