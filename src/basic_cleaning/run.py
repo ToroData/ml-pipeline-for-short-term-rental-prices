@@ -76,6 +76,11 @@ def go(args):
     dataframe['minimum_nights'] = np.where(
         dataframe['minimum_nights'] > 0, np.log(
             dataframe['minimum_nights']), 0)
+    
+    # Drop data for wrong geolocation
+    logger.info("Correcting the coordinate range")
+    idx = dataframe['longitude'].between(-74.25, -73.50) & dataframe['latitude'].between(40.5, 41.2)
+    dataframe = dataframe[idx].copy()
 
     # Save the cleaned dataset to the specified output artifact path
     logger.info("Saving dataframe")
