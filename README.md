@@ -94,7 +94,7 @@ To train a new model directly from released project, run:
 ```
 mlflow run https://github.com/ToroData/ml-pipeline-for-short-term-rental-prices.git -v 1.0.0 -P hydra_options="etl.sample='sample2.csv'"
 ```
-![Test failed](/images/test_failed.png)
+![Test failed](/images/failed_test.png)
 
 Test failed due to coordinate boundaries
 
@@ -108,9 +108,9 @@ mlflow run https://github.com/ToroData/ml-pipeline-for-short-term-rental-prices.
 ![Test](/images/tests.png)
 
 ## Hardware Report
-![Hardware report](/Report%20of%20the%20hardware%20utilization%20_%20nyc_airbnb%20–%20Weights%20&%20Biases.pdf)
+[Hardware report](/Report%20of%20the%20hardware%20utilization%20_%20nyc_airbnb%20–%20Weights%20&%20Biases.pdf)
 ![Test](/images/hardware.png)
 
 ## License
 
-![License](LICENSE.txt)
+[License](LICENSE.txt)
