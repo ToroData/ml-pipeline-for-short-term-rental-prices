@@ -61,9 +61,9 @@ modeling -> random_forest -> n_estimators to 10 and etl->min_price to 50:
 The scope of this section is to get an idea of how the process of an EDA works in the context of pipelines, during the data exploration phase. [HTML EDA Report](src/eda/report/eda-report.html). Then I transfer the data processing I have done as part of the EDA to a new `basic_cleaning` step that starts from the `sample.csv` artifact and create a new artifact `clean_sample.csv` with the cleaned data. 
 
 ## Data Testing
-[Prod tag](/images/prod_tag.png)
+![Prod tag](/images/prod_tag.png)
 After the cleaning, it is a good practice to put some tests that verify that the data does not contain surprises. Tested with `clean_sample.csv:latest`.
-[Prod tag](/images/tests.png)
+![Tests](/images/tests.png)
 
 ## Data Splitting
 Use the provided component called `train_val_test_split` to extract and segregate the test set. Add it to the pipeline then run the pipeline. As usual, use the configuration for the parameters like `test_size`, `random_seed` and `stratify_by`.
@@ -76,13 +76,13 @@ mlflow run .   -P steps=train_random_forest   -P hydra_options="modeling.random_
 With that command I perform multiple experiments on a random forest.
 
 ## Select the Best Model
-[Best model](/images/training.png)
+![Best model](/images/training.png)
 
 ## Test
-[Test](/images/test.png)
+![Test](/images/test.png)
 
 ## Visualize the Pipeline
-[Lineage](/images/lineage.png)
+![Lineage](/images/lineage.png)
 
 ## Release the Pipeline
 I realease on Github realeases.
@@ -94,7 +94,7 @@ To train a new model directly from released project, run:
 ```
 mlflow run https://github.com/ToroData/ml-pipeline-for-short-term-rental-prices.git -v 1.0.0 -P hydra_options="etl.sample='sample2.csv'"
 ```
-[Test failed](/images/test_failed.png)
+![Test failed](/images/test_failed.png)
 
 Test failed due to coordinate boundaries
 
@@ -105,12 +105,12 @@ Once corrected in the cleanup step, he launched again. Subsequently, I evaluated
 mlflow run https://github.com/ToroData/ml-pipeline-for-short-term-rental-prices.git -v 1.1.0 -P hydra_options="etl.sample='sample2.csv'"
 ```
 
-[Test](/images/tests.png)
+![Test](/images/tests.png)
 
 ## Hardware Report
-[Hardware report](/Report%20of%20the%20hardware%20utilization%20_%20nyc_airbnb%20–%20Weights%20&%20Biases.pdf)
-[Test](/images/hardware.png)
+![Hardware report](/Report%20of%20the%20hardware%20utilization%20_%20nyc_airbnb%20–%20Weights%20&%20Biases.pdf)
+![Test](/images/hardware.png)
 
 ## License
 
-[License](LICENSE.txt)
+![License](LICENSE.txt)
